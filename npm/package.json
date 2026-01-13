@@ -1,0 +1,42 @@
+{
+  "name": "dev-swarm",
+  "version": "0.1.0",
+  "description": "AI-powered development orchestration using GitHub Issues as the control plane",
+  "keywords": [
+    "ai",
+    "claude",
+    "github",
+    "automation",
+    "development",
+    "orchestration",
+    "issues",
+    "workflow"
+  ],
+  "homepage": "https://github.com/nathanbarrett/dev-swarm-go",
+  "bugs": {
+    "url": "https://github.com/nathanbarrett/dev-swarm-go/issues"
+  },
+  "license": "MIT",
+  "author": "Nathan Barrett",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanbarrett/dev-swarm-go.git"
+  },
+  "bin": {
+    "dev-swarm": "./bin/dev-swarm"
+  },
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
+}

@@ -1,0 +1,43 @@
+# Binaries (local build output)
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+dev-swarm
+
+# Test binary
+*.test
+
+# Coverage
+*.out
+coverage.html
+
+# Dependency directories
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+
+# npm
+npm/node_modules/
+npm/bin/dev-swarm-binary
+npm/*.tar.gz
+
+# But keep npm/bin/dev-swarm (the shell wrapper)
+!npm/bin/dev-swarm
+
+# Local config (for testing)
+.config/
