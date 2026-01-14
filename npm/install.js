@@ -36,7 +36,7 @@ function getPlatform() {
 
 function getBinaryName() {
   const { platform, arch } = getPlatform();
-  return `dev-swarm_${VERSION}_${platform}_${arch}.tar.gz`;
+  return `dev-swarm-go_${VERSION}_${platform}_${arch}.tar.gz`;
 }
 
 function getDownloadUrl() {
@@ -74,8 +74,8 @@ async function download(url, dest) {
 
 async function install() {
   const binDir = path.join(__dirname, 'bin');
-  const binaryPath = path.join(binDir, 'dev-swarm-binary');
-  const tarPath = path.join(__dirname, 'dev-swarm.tar.gz');
+  const binaryPath = path.join(binDir, 'dev-swarm-go-binary');
+  const tarPath = path.join(__dirname, 'dev-swarm-go.tar.gz');
 
   // Ensure bin directory exists
   if (!fs.existsSync(binDir)) {
@@ -83,7 +83,7 @@ async function install() {
   }
 
   // Download binary
-  console.log(`Downloading dev-swarm v${VERSION}...`);
+  console.log(`Downloading dev-swarm-go v${VERSION}...`);
   const url = getDownloadUrl();
 
   try {
@@ -103,7 +103,7 @@ async function install() {
     execSync(`tar -xzf "${tarPath}" -C "${binDir}"`, { stdio: 'inherit' });
 
     // Rename extracted binary
-    const extractedName = 'dev-swarm';
+    const extractedName = 'dev-swarm-go';
     const extractedPath = path.join(binDir, extractedName);
 
     if (fs.existsSync(extractedPath)) {
@@ -116,7 +116,7 @@ async function install() {
     // Clean up
     fs.unlinkSync(tarPath);
 
-    console.log('dev-swarm installed successfully!');
+    console.log('dev-swarm-go installed successfully!');
   } catch (err) {
     console.error(`Failed to extract: ${err.message}`);
     process.exit(1);

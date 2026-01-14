@@ -1,5 +1,5 @@
 {
-  "name": "dev-swarm",
+  "name": "dev-swarm-go",
   "version": "0.1.0",
   "description": "AI-powered development orchestration using GitHub Issues as the control plane",
   "keywords": [
@@ -23,7 +23,7 @@
     "url": "https://github.com/nathanbarrett/dev-swarm-go.git"
   },
   "bin": {
-    "dev-swarm": "./bin/dev-swarm"
+    "dev-swarm-go": "./bin/dev-swarm-go"
   },
   "scripts": {
     "postinstall": "node install.js"

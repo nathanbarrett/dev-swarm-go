@@ -11,10 +11,10 @@ LDFLAGS="$LDFLAGS -X github.com/nathanbarrett/dev-swarm-go/pkg/version.Version=$
 LDFLAGS="$LDFLAGS -X github.com/nathanbarrett/dev-swarm-go/pkg/version.Commit=$COMMIT"
 LDFLAGS="$LDFLAGS -X github.com/nathanbarrett/dev-swarm-go/pkg/version.Date=$DATE"
 
-echo "Building dev-swarm $VERSION..."
+echo "Building dev-swarm-go $VERSION..."
 
 mkdir -p bin
 
-go build -ldflags "$LDFLAGS" -o bin/dev-swarm ./cmd/dev-swarm
+go build -ldflags "$LDFLAGS" -o bin/dev-swarm-go ./cmd/dev-swarm-go
 
-echo "Done: bin/dev-swarm"
+echo "Done: bin/dev-swarm-go"

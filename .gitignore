@@ -5,7 +5,7 @@
 *.dll
 *.so
 *.dylib
-dev-swarm
+/dev-swarm-go
 
 # Test binary
 *.test
@@ -33,11 +33,11 @@ dist/
 
 # npm
 npm/node_modules/
-npm/bin/dev-swarm-binary
+npm/bin/dev-swarm-go-binary
 npm/*.tar.gz
 
-# But keep npm/bin/dev-swarm (the shell wrapper)
-!npm/bin/dev-swarm
+# But keep npm/bin/dev-swarm-go (the shell wrapper)
+!npm/bin/dev-swarm-go
 
 # Local config (for testing)
 .config/

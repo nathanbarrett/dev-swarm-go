@@ -2,12 +2,12 @@
 
 # Get the directory where this script is located
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-BINARY="$SCRIPT_DIR/dev-swarm-binary"
+BINARY="$SCRIPT_DIR/dev-swarm-go-binary"
 
 # Check if binary exists
 if [ ! -f "$BINARY" ]; then
-  echo "Error: dev-swarm binary not found at $BINARY"
-  echo "Try reinstalling: npm install -g dev-swarm"
+  echo "Error: dev-swarm-go binary not found at $BINARY"
+  echo "Try reinstalling: npm install -g dev-swarm-go"
   exit 1
 fi
 

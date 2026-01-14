@@ -1,10 +1,10 @@
-# dev-swarm
+# dev-swarm-go
 
 AI-powered development orchestration using GitHub Issues as the control plane.
 
 ## Overview
 
-`dev-swarm` is a local daemon that monitors GitHub issues across multiple repositories, automatically spawning Claude Code sessions to plan, implement, and fix code based on label-driven workflows.
+`dev-swarm-go` is a local daemon that monitors GitHub issues across multiple repositories, automatically spawning Claude Code sessions to plan, implement, and fix code based on label-driven workflows.
 
 ### Key Features
 
@@ -18,7 +18,7 @@ AI-powered development orchestration using GitHub Issues as the control plane.
 ### How It Works
 
 1. User creates a GitHub issue and adds the `user:ready-to-plan` label
-2. `dev-swarm` detects the label and spawns a Claude session
+2. `dev-swarm-go` detects the label and spawns a Claude session
 3. Claude analyzes the issue, writes an implementation plan, updates the label
 4. User reviews, provides feedback or approves
 5. Claude implements the solution, creates a PR
@@ -30,7 +30,7 @@ AI-powered development orchestration using GitHub Issues as the control plane.
 ### Via npm (recommended)
 
 ```bash
-npm install -g dev-swarm
+npm install -g dev-swarm-go
 ```
 
 ### From source
@@ -51,21 +51,21 @@ cd dev-swarm-go
 
 ```bash
 # Initialize configuration
-dev-swarm init
+dev-swarm-go init
 
 # Add a repository
-dev-swarm add --repo owner/my-repo --path ~/code/my-repo
+dev-swarm-go add --repo owner/my-repo --path ~/code/my-repo
 
 # Sync labels to the repository
-dev-swarm sync-labels owner/my-repo
+dev-swarm-go sync-labels owner/my-repo
 
 # Start monitoring
-dev-swarm start
+dev-swarm-go start
 ```
 
 ## Configuration
 
-Configuration is stored at `~/.config/dev-swarm/config.yaml`.
+Configuration is stored at `~/.config/dev-swarm-go/config.yaml`.
 
 ```yaml
 settings:
@@ -85,18 +85,18 @@ codebases:
 ## CLI Commands
 
 ```bash
-dev-swarm start           # Start with TUI
-dev-swarm start --daemon  # Start in background
-dev-swarm stop            # Stop the orchestrator
-dev-swarm status          # Show current status
-dev-swarm logs            # View log file
+dev-swarm-go start           # Start with TUI
+dev-swarm-go start --daemon  # Start in background
+dev-swarm-go stop            # Stop the orchestrator
+dev-swarm-go status          # Show current status
+dev-swarm-go logs            # View log file
 
-dev-swarm init            # Create config file
-dev-swarm add             # Add a repository
-dev-swarm remove          # Remove a repository
-dev-swarm list            # List repositories
-dev-swarm sync-labels     # Create labels in repos
-dev-swarm cleanup         # Remove orphaned worktrees
+dev-swarm-go init            # Create config file
+dev-swarm-go add             # Add a repository
+dev-swarm-go remove          # Remove a repository
+dev-swarm-go list            # List repositories
+dev-swarm-go sync-labels     # Create labels in repos
+dev-swarm-go cleanup         # Remove orphaned worktrees
 ```
 
 ## Label Workflow
